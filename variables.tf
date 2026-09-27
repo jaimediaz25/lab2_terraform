@@ -33,10 +33,12 @@ variable "vnet_address_space" {
 }
 
 variable "tags" {
-  description = "A map of tags to assign to resources."
+  description = "Tags para los recursos"
   type        = map(string)
 
-  default = "terraform"
+  default = {
+    Name = "terraform"
+  }
 }
 
 variable "subscription_id" {
